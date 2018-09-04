@@ -25,7 +25,7 @@ function find(spec) {
 }
 
 function tutoriallink(tutorial) {
-  return helper.toTutorial(tutorial, null, { tag: 'em', classname: 'disabled', prefix: 'Tutorial: ' });
+  return helper.toTutorial(tutorial, null, { tag: 'em', classname: '', prefix: 'Guide: ' });
 }
 
 function getAncestorLinks(doclet) {
@@ -659,7 +659,7 @@ exports.publish = function someFunction(taffyData, opts, tutorials) {
   // tutorials can have only one parent so there is no risk for loops
   function saveChildren(node) {
     node.children.forEach(function eachChild(child) {
-      generateTutorial('Tutorial: ' + child.title, child, helper.tutorialToUrl(child.name));
+      generateTutorial(child.title, child, helper.tutorialToUrl(child.name));
       saveChildren(child);
     });
   }
