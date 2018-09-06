@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/braintree/jsdoc-template",
   "devDependencies": {
-    "taffydb": "^2.7.3"
+    "pluralize": "7.0.0",
+    "taffydb": "2.7.3"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.10"
   }
 }
