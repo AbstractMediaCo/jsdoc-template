@@ -2,7 +2,7 @@
   var data = obj;
   var self = this;
 ?>
-
+<div class='method-wrapper'>
 <?js if (data.kind !== 'module') { ?>
   <?js if (data.kind === 'class' && data.classdesc) { ?>
     <h2>Constructor</h2>
@@ -112,7 +112,7 @@
     exceptions.forEach(function(r) { ?>
       <?js= self.partial('exceptions.tmpl', r) ?>
     <?js });
-  } 
+  }
 } ?>
 
 <?js if (data.examples && examples.length) { ?>
@@ -126,3 +126,4 @@
     <?js= this.partial('examples.tmpl', examples) ?>
   </div>
 <?js } ?>
+</div>

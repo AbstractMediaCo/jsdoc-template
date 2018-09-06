@@ -563,7 +563,7 @@ footer {
 
 .params, .props {
     border-spacing: 0;
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     border-radius: 3px;
     width: 100%;
     font-size: 14px;
@@ -788,10 +788,13 @@ table {
 }
 
 table tbody td {
-    border-top: 1px solid hsl(207, 10%, 86%);
-    border-right: 1px solid #eee;
+    border-top: 1px solid  rgba(0,0,0,0.20);;
+    border-right: 1px solid  rgba(0,0,0,0.20);;
     padding: 5px;
-    /*word-wrap: break-word;*/
+}
+
+table tbody tr:nth-child(2n) {
+  background-color: rgba(0,0,0,0.03);
 }
 
 td table.params, td table.props {

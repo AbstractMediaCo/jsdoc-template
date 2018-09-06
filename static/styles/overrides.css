@@ -1,0 +1,61 @@
+.method-wrapper {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding: 1.25rem 0;
+  margin: 1.25rem 0;
+}
+
+.method-wrapper:first-child {
+  border-top: 0
+}
+
+h3.subsection-title {
+  border-bottom: 0;
+}
+nav>ul>li ul {
+    border-left: 3px solid #0095dd;
+    padding-left: 15px;
+    height: 0;
+    transition: all 250ms ease-in-out
+}
+
+
+nav>ul>li.active ul {
+    transition: all 250ms ease-in-out;
+    height: auto;
+    border-left: 3px solid #0095dd;
+    padding-left: 15px;
+}
+
+nav>ul>li ul li {
+  display: none
+}
+
+nav>ul>li.active ul li {
+  display: list-item
+}
+
+.params, .props {
+  border-top: 0;
+  margin-left: 0;
+  padding-left: 1.25rem;
+
+  border-left: 1px solid rgba(0,0,0,0.2)
+}
+
+.params tbody {
+  width: 100%;
+}
+
+table {
+  display: inherit;
+  table-layout: inherit;
+}
+
+table tbody td:last-child {
+  border-right: none;
+  width: 100%
+}
+
+.params td, .params th, .props td, .props th {
+  padding: 10px 16px;
+}
