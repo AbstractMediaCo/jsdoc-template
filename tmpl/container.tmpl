@@ -2,8 +2,8 @@
   var self = this;
   var conf = env.conf;
   var isGlobalPage;
-
   docs.forEach(function(doc, i) {
+    if (doc.kind === 'list') console.log(doc)
     isGlobalPage = isGlobalPage || doc.kind === 'globalobj';
 
     if (doc.kind === 'mainpage' || (doc.kind === 'package')) { ?>
@@ -193,7 +193,7 @@
         <?js } else { ?>
           <?js= self.partial('members.tmpl', e) ?>
         <?js }
-      }); 
+      });
     } ?>
 
     <?js

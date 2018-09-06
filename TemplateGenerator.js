@@ -24,8 +24,6 @@ class TemplateGenerator {
     this.setTutorials(this.tutorials); // set up tutorials for helper
     /* paths */
     this.templatePath = path.normalize(opts.template);
-    /* utils */
-    this.hasOwnProp = Object.prototype.hasOwnProperty;
 
     /* set special URLs */
     this.globalUrl = helper.getUniqueFilename('global');
@@ -51,7 +49,8 @@ class TemplateGenerator {
     this.view.htmlsafe = this.htmlsafe;
     this.view.outputSourceFiles = this.outputSourceFiles;
     this.view.nav = this.buildNav(this.members);
-
+    this.attachModuleSymbols('modules');
+    this.attachModuleSymbols('lists');
     if (this.outputSourceFiles) {
       this.generateSourceFiles(this.sourceFiles, opts.encoding);
     }
