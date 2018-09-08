@@ -149,14 +149,12 @@
     <?js
       var members = self.find({kind: 'member', memberof: isGlobalPage ? {isUndefined: true} : doc.longname});
       var excludePattern = new RegExp(conf.source.excludePattern);
-
       // symbols that are assigned to module.exports are not globals, even though they're not a memberof anything
       if (isGlobalPage && members && members.length && members.forEach) {
         members = members.filter(function(m) {
           return m.longname && m.longname.indexOf('module:') !== 0;
         });
       }
-
       if (members && members.length && members.forEach) {
   ?>
         <h3 class="subsection-title">Members</h3>
