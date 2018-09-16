@@ -1,7 +1,7 @@
-'use strict';
 
-$(document).ready(function () {
-  var currentSectionNav, target;
+
+$(document).ready(function pageLocation() {
+  let currentSectionNav; let target;
 
   // If an anchor hash is in the URL highlight the menu item
   highlightActiveHash();
@@ -16,7 +16,7 @@ $(document).ready(function () {
   }
 
   // function to scroll to anchor when clicking an anchor linl
-  $('a[href*="#"]:not([href="#"])').click(function () {
+  $('a[href*="#"]:not([href="#"])').click(function scrollto() {
     /* eslint-disable no-invalid-this */
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       target = $(this.hash);
@@ -32,12 +32,12 @@ $(document).ready(function () {
 });
 
 // If a new anchor section is selected, change the hightlighted menu item
-$(window).bind('hashchange', function (event) {
+$(window).bind('hashchange', function hashchange(event) {
   highlightActiveHash(event);
 });
 
 function highlightActiveHash(event) {
-  var oldUrl, oldSubSectionElement;
+  let oldUrl; let oldSubSectionElement;
 
   // check for and remove old hash active state
   if (event && event.originalEvent.oldURL) {
@@ -58,26 +58,26 @@ function highlightActiveHash(event) {
 }
 
 function highlightActiveSection() {
-  var pageId = getCurrentSectionName();
+  const pageId = getCurrentSectionName();
 
   $('#' + pageId + '-nav').addClass('active');
 }
 
 function getCurrentSectionName() {
-  var path = window.location.pathname;
-  var pageUrl = path.split('/').pop();
+  const path = window.location.pathname;
+  const pageUrl = path.split('/').pop();
 
-  var sectionName = pageUrl.substring(0, pageUrl.indexOf('.'));
+  let sectionName = pageUrl.substring(0, pageUrl.indexOf('.'));
 
   // remove the wodr module- if its in the url
-  sectionName = sectionName.replace('module-', '');
+  sectionName = sectionName.replace(/(module|list|service)-/, '');
 
   return sectionName;
 }
 
 function getCurrentHashName() {
-  var pageSubSectionId;
-  var pageSubSectionHash = window.location.hash;
+  let pageSubSectionId;
+  const pageSubSectionHash = window.location.hash;
 
   if (pageSubSectionHash) {
     pageSubSectionId = pageSubSectionHash.substring(1).replace('.', '');
