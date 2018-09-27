@@ -10,6 +10,10 @@ const lib = require('./lib');
 
 class TemplateGenerator {
   constructor(data, opts, tutorials) {
+    this.fs = require('jsdoc/fs');
+    this.template = require('jsdoc/template');
+    this.logger = require('jsdoc/util/logger');
+    this.path = path;
     this.conf = conf;
     this.opts = opts;
     /* add all helper funcs ~ without binding ~ */

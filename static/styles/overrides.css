@@ -59,3 +59,41 @@ table tbody td:last-child {
 .params td, .params th, .props td, .props th {
   padding: 10px 16px;
 }
+
+p {
+  max-width: 100%
+}
+h3 {
+  text-transform: none;
+  font-size: 1.5rem
+}
+
+blockquote {
+  margin: 0.75rem 0 !important;
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-left: 1px solid goldenrod;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+.container ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+footer {
+  margin-left: 0;
+}
+
+footer .nav-offset {
+  margin-left: 300px;
+}
+
+.container.main-content {
+  min-height: calc(100vh - 160px)
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 56px;
+}
