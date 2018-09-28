@@ -90,9 +90,12 @@ footer .nav-offset {
 }
 
 .container.main-content {
-  min-height: calc(100vh - 160px)
+  min-height: calc(100vh - 160px);
+  padding-top: 30px;
 }
-
+#main {
+  padding-top: 30px;
+}
 body {
   min-height: 100vh;
   padding-top: 56px;
