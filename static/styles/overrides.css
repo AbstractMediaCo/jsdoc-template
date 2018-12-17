@@ -37,29 +37,46 @@ h3.subsection-title {
 .params, .props {
   border-top: 0;
   margin-left: 0;
-  padding-left: 1.25rem;
+  padding-left: 0.75rem;
 
   border-left: 1px solid rgba(0,0,0,0.2)
 }
-
+/*
 .params tbody {
   width: 100%;
 }
+*/
+/*
+.params td, .params th, .props td, .props th {
+  min-width: 115px;
+  min-width: 25%;
+}
+*/
+
+.params .name, .props .name, .name code {
+  min-width: 130px;
+}
+.params .type, .props .type {
+  min-width: 120px;
+}
+.params .description, .props .description {
+  min-width: 300px;
+}
 
 table {
-  display: inherit;
-  table-layout: inherit;
+  display: table;
+  table-layout: auto;
+  width: 100%
 }
+/*
+thead, tbody, tr {
+  width: 100%;
+} */
 
 table tbody td:last-child {
   border-right: none;
   /* width: 100% */
 }
-
-.params td, .params th, .props td, .props th {
-  padding: 10px 16px;
-}
-
 p {
   max-width: 100%
 }
@@ -88,15 +105,42 @@ footer {
 footer .nav-offset {
   margin-left: 300px;
 }
+.container {
+  max-width: 100%;
+}
 
-.container.main-content {
+.main-content {
   min-height: calc(100vh - 160px);
-  padding-top: 30px;
+  padding-top: 1rem;
+  padding-left: 300px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 100%;
+  align-content: center;
+  align-items: stretch;
 }
+
 #main {
-  padding-top: 30px;
+  max-width: calc(100vw - 300px);
 }
+#basic-container {
+  max-width: 1760px;
+  margin: 0 auto;
+}
+.title-wrapper {
+  max-width: 1760px;
+  margin: 0 auto;
+}
+.title-container {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.25)
+}
+
 body {
   min-height: 100vh;
   padding-top: 56px;
+}
+
+section {
+  max-width: unset;
 }
