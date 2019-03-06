@@ -144,3 +144,8 @@ body {
 section {
   max-width: unset;
 }
+ul {
+  /* these are bootstrap defaults - this just restores them from jsdoc */
+  list-style-type: disc;
+  padding-left: 40px;
+}
